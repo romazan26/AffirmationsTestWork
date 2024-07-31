@@ -14,6 +14,21 @@ struct AffirmationsView: View {
             Image(vm.simpleTheme)
                 .resizable()
             .ignoresSafeArea()
+           
+                TabView {
+                    ForEach(vm.affirmations, id: \.self) { affirmation in
+                        Text(affirmation)
+                            .foregroundStyle(.white)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                    }
+                    .rotationEffect(.degrees(-90))
+                }
+                .rotationEffect(.degrees(90), anchor: .center)
+                .tabViewStyle(.page(indexDisplayMode: .never))
+            
+                
         }
     }
 }

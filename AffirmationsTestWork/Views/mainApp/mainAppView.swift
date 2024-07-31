@@ -22,7 +22,7 @@ struct mainAppView: View {
                 CategoriesView(vm: vm)
                     .padding(.bottom)
                     .tabItem { VStack {
-                    Image(systemName: "table.fill")
+                    Image(systemName: "rectangle.split.3x3.fill")
                     Text("Categories")
                 } }
                 ThemesView(vm: vm)
@@ -38,6 +38,7 @@ struct mainAppView: View {
                     Text("Settings")
                 } }
             }
+            
 
     }
 }

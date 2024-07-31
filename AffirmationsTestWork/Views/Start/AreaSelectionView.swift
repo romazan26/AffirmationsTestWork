@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AreaSelectionView: View {
-    @StateObject var vm: ViewModel
+    @StateObject var vm: StartViewModel
     var body: some View {
         VStack {
             
@@ -34,5 +34,5 @@ struct AreaSelectionView: View {
 }
 
 #Preview {
-    AreaSelectionView(vm: ViewModel())
+    AreaSelectionView(vm: StartViewModel())
 }

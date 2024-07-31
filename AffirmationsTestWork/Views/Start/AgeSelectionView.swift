@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AgeSelectionView: View {
-    @StateObject var vm: ViewModel
+    @StateObject var vm: StartViewModel
     var body: some View {
         VStack {
             
@@ -38,5 +38,5 @@ struct AgeSelectionView: View {
 }
 
 #Preview {
-    AgeSelectionView(vm: ViewModel())
+    AgeSelectionView(vm: StartViewModel())
 }

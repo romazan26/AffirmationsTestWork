@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
-    @StateObject var vm = ViewModel()
+    @StateObject var vm = StartViewModel()
     var body: some View {
         ZStack {
             //MARK: - Background
@@ -39,7 +39,7 @@ struct StartView: View {
                 
                 //MARK: - Continue button
                 Button {
-                    vm.startViewsTag += 1
+                    vm.slideStartView()
                 } label: {
                         MainButtonView(text: "Continue")
                 }

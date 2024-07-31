@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DailyMotivationView: View {
-    @StateObject var vm: ViewModel
+    @StateObject var vm: StartViewModel
     var body: some View {
         VStack {
             
@@ -55,5 +55,5 @@ struct DailyMotivationView: View {
 }
 
 #Preview {
-    DailyMotivationView(vm: ViewModel())
+    DailyMotivationView(vm: StartViewModel())
 }

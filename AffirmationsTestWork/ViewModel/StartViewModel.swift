@@ -7,7 +7,8 @@
 
 import Foundation
 
-final class ViewModel: ObservableObject{
+final class StartViewModel: ObservableObject{
+    
     @Published var startViewsTag = 1
     
     @Published var simpleGendder = ""
@@ -16,4 +17,10 @@ final class ViewModel: ObservableObject{
     @Published var simpleStartTime = Date()
     @Published var simpleEndTime = Date()
     @Published var simpleCountMotivation: Float = 0
+    
+    func slideStartView(){
+        if startViewsTag < 5 {
+            startViewsTag += 1
+        }
+    }
 }

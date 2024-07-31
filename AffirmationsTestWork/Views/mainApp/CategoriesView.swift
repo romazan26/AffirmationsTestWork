@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    @StateObject var vm: MainAppViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            
+            ScrollView {
+                //MARK: - Top button unlock all
+                HStack {
+                    Spacer()
+                    Button("Unlock All", action: {
+                        //action
+                    })
+                }
+                .padding(.horizontal, 20)
+                .offset(y: -38)
+                
+                //MARK: - Categories list
+                CategoriesListView(vm: vm, items: vm.categoriesImages)
+                
+                //MARK: - bottom Button unlock all
+                MainButtonView(text: "Unlock all")
+                    .padding()
+            }
+            .navigationTitle("Categories")
+            
+        }
     }
 }
-
-#Preview {
-    CategoriesView()
-}
+    
+    #Preview {
+        CategoriesView(vm: MainAppViewModel())
+    }

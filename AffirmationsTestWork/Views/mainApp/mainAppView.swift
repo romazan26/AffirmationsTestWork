@@ -12,26 +12,33 @@ struct mainAppView: View {
     @StateObject var vm = MainAppViewModel()
     
     var body: some View {
-        NavigationView {
             TabView() {
-                AffirmationsView(vm: vm).tabItem { VStack {
+                AffirmationsView(vm: vm)
+                    .padding(.bottom)
+                    .tabItem { VStack {
                     Image(systemName: "doc.plaintext.fill")
                     Text("Affirmation")
                 } }
-                CategoriesView().tabItem { VStack {
+                CategoriesView(vm: vm)
+                    .padding(.bottom)
+                    .tabItem { VStack {
                     Image(systemName: "table.fill")
                     Text("Categories")
                 } }
-                ThemesView(vm: vm).tabItem { VStack {
+                ThemesView(vm: vm)
+                    .padding(.bottom)
+                    .tabItem { VStack {
                     Image(systemName: "paintpalette.fill")
                     Text("Themes")
                 } }
-                SettingsView().tabItem { VStack {
+                SettingsView()
+                    .padding(.bottom)
+                    .tabItem { VStack {
                     Image(systemName: "gearshape.fill")
                     Text("Settings")
                 } }
             }
-        }
+
     }
 }
 

@@ -1,16 +1,16 @@
 //
-//  genreLstView.swift
-//  Movieplanner
+//  CategoriesListView.swift
+//  AffirmationsTestWork
 //
-//  Created by Роман on 10.06.2024.
+//  Created by Роман on 31.07.2024.
 //
 
 import SwiftUI
 
-struct ThemesListView: View {
+struct CategoriesListView: View {
     @StateObject var vm: MainAppViewModel
     let items: [ImageResource]
-    let screenWidth = 3
+    let screenWidth = 2
     @State var groupedItems: [[ImageResource]] = [[ImageResource]]()
     
     
@@ -41,10 +41,9 @@ struct ThemesListView: View {
             ForEach(groupedItems, id: \.self) { subItem in
                 HStack{
                     ForEach(subItem, id: \.self) { item in
-                        ThemeCellView(image: item, ischoose: vm.simpleTheme)
-                            .frame(width: 120, height: 200)
+                        CategoriesCellView(image: item, ischoose: vm.simpleCategories)
                             .onTapGesture {
-                                vm.simpleTheme = item
+                                vm.simpleCategories = item
                             }
                             
                     }
@@ -58,5 +57,5 @@ struct ThemesListView: View {
 }
 
 #Preview {
-    ThemesListView(vm: MainAppViewModel(), items: [.theme1, .theme2, .theme3, .theme4, .theme5, .theme6, .theme7, .theme8, .theme9, .theme10, .theme11, .theme12])
+    CategoriesListView(vm: MainAppViewModel(), items: [.categories1, .categories2, .categories3, .categories4, .categories5, .categories6, .categories7, .categories8, .categories9, .categories10, .categories11, .categories12])
 }

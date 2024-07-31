@@ -1,5 +1,5 @@
 //
-//  ThemeCellView.swift
+//  CategoriesCellView.swift
 //  AffirmationsTestWork
 //
 //  Created by Роман on 31.07.2024.
@@ -7,22 +7,20 @@
 
 import SwiftUI
 
-struct ThemeCellView: View {
+struct CategoriesCellView: View {
     var image: ImageResource
     var ischoose: ImageResource = .theme1
     var body: some View {
-        ZStack {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             Image(image)
                 .resizable()
-                .frame(width: 120, height: 200)
                 .aspectRatio(contentMode: .fill)
-                
+                .frame(width: 180, height: 180)
             
-            VStack {
-                Spacer()
-                Text("I am perfect")
+            HStack {
+                Text("Categories")
                     .foregroundStyle(.white)
-                    .font(.title3)
+                    .font(.system(size: 12,weight: .heavy))
                 .multilineTextAlignment(.center)
                 Spacer()
                 HStack {
@@ -31,15 +29,17 @@ struct ThemeCellView: View {
                         .resizable()
                         .foregroundStyle(.white)
                     .frame(width: 20, height: 20)
-                    .offset(x: 5)
                 }
-            }.padding()
+            }
+            
+            .padding()
+            .background(Color(.black).opacity(0.6))
         }
-        .frame(width: 120, height: 200)
+        .frame(width: 180, height: 180)
         .cornerRadius(10)
     }
 }
 
 #Preview {
-    ThemeCellView(image: .theme1, ischoose: .theme1)
+    CategoriesCellView(image: .categories1)
 }

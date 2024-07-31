@@ -10,18 +10,32 @@ import SwiftUI
 struct ThemesView: View {
     @StateObject var vm: MainAppViewModel
     var body: some View {
-
-        VStack {
+        
+        NavigationView {
             ScrollView {
-                    ThemesListView(vm: vm, items: vm.themesImages)
-                }
                 
+                //MARK: - Top button unlock all
+                HStack {
+                    Spacer()
+                    Button("Unlock All", action: {
+                        //action
+                    })
+                }
+                .padding(.horizontal, 20)
+                .offset(y: -38)
+                
+                //MARK: - Themes
+                ThemesListView(vm: vm, items: vm.themesImages)
+                    .padding()
+               
+                //MARK: - bottom Button unlock all
+                MainButtonView(text: "Unlock all")
+                    .padding()
+                
+            }
+                .navigationTitle("Themes")
         }
-        .navigationTitle("Themes")
-        .navigationBarItems(trailing: Button("Unlock All", action: {
-            //action
-    }))
-        }
+    }
     
 }
 

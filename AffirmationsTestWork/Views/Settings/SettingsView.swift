@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject var vm: SettingsViewModel
     var body: some View {
         NavigationView {
             ScrollView {
@@ -31,8 +32,9 @@ struct SettingsView: View {
                     Text("General")
                         .padding(.top)
                     VStack{
+                        //MARK: - Reminders
                         NavigationLink {
-                            
+                            RemindersView(vm: vm)
                         } label: {
                             HStack {
                                 Image(systemName: "bell.square.fill")
@@ -41,12 +43,14 @@ struct SettingsView: View {
                                     .foregroundStyle(.yellow)
                                 Text("Reminders")
                                 Spacer()
-                                Text("Off")
+                                Text(vm.reminders ? "ON" : "Off")
                             }
                         }
                         Divider()
+                        
+                        //MARK: - Widget
                         NavigationLink {
-                            
+                            WidgetView()
                         } label: {
                             HStack {
                                 Image(systemName: "rectangle.inset.topleft.fill")
@@ -58,8 +62,10 @@ struct SettingsView: View {
                             }
                         }
                         Divider()
+                        
+                        //MARK: - Appearance
                         NavigationLink {
-                            
+                            AppearanceView(vm: vm)
                         } label: {
                             HStack {
                                 Image(systemName: "lightbulb")
@@ -72,8 +78,10 @@ struct SettingsView: View {
                             }
                         }
                         Divider()
+                        
+                        //MARK: - Terms of use
                         NavigationLink {
-                            
+                            Text("Terms of use")
                         } label: {
                             HStack {
                                 Image(systemName: "doc.text")
@@ -86,8 +94,10 @@ struct SettingsView: View {
                             }
                         }
                         Divider()
+                        
+                        //MARK: - Privacy policy
                         NavigationLink {
-                            
+                            Text("Privacy policy")
                         } label: {
                             HStack {
                                 Image(systemName: "doc.text")
@@ -100,15 +110,15 @@ struct SettingsView: View {
                             }
                         }
                     }
-                    .foregroundStyle(.black)
+                    //.foregroundStyle(.black)
                     .padding()
-                    .background(Color.white)
+                    .background(Color.backStack)
                     .cornerRadius(10)
                     .font(.title3)
                     Spacer()
                 }
                 .padding()
-            }.background(Color.gray.opacity(0.2))
+            }.background(Color.gray.opacity(0.1))
                 .navigationTitle("Settings")
         }
     }
@@ -116,6 +126,6 @@ struct SettingsView: View {
 
 #Preview {
     NavigationView {
-        SettingsView()
+        SettingsView(vm: SettingsViewModel())
     }
 }

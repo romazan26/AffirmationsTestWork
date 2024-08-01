@@ -10,6 +10,7 @@ import SwiftUI
 struct mainAppView: View {
     
     @StateObject var vm = MainAppViewModel()
+    @StateObject var vmSettings: SettingsViewModel
     
     var body: some View {
             TabView() {
@@ -31,7 +32,7 @@ struct mainAppView: View {
                     Image(systemName: "paintpalette.fill")
                     Text("Themes")
                 } }
-                SettingsView()
+                SettingsView(vm: vmSettings)
                     .padding(.bottom)
                     .tabItem { VStack {
                     Image(systemName: "gearshape.fill")
@@ -44,5 +45,5 @@ struct mainAppView: View {
 }
 
 #Preview {
-    mainAppView()
+    mainAppView( vmSettings: SettingsViewModel())
 }

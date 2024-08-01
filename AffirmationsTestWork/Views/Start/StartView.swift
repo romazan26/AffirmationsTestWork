@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
-    @StateObject var vm = StartViewModel()
+    @StateObject var vm: StartViewModel
     var body: some View {
         ZStack {
             //MARK: - Background
@@ -52,5 +52,5 @@ struct StartView: View {
 }
 
 #Preview {
-    StartView()
+    StartView(vm: StartViewModel())
 }

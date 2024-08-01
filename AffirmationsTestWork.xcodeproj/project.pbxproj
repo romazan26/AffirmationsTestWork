@@ -30,6 +30,10 @@
 		3027C9782C5A6A920078B585 /* ThemeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9772C5A6A920078B585 /* ThemeCellView.swift */; };
 		3027C97A2C5AA0140078B585 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9792C5AA0140078B585 /* CategoriesListView.swift */; };
 		3027C97C2C5AA2700078B585 /* CategoriesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C97B2C5AA2700078B585 /* CategoriesCellView.swift */; };
+		3027C97F2C5B68320078B585 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C97E2C5B68320078B585 /* RemindersView.swift */; };
+		3027C9812C5B68670078B585 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9802C5B68670078B585 /* SettingsViewModel.swift */; };
+		3027C9852C5B6C870078B585 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9842C5B6C870078B585 /* WidgetView.swift */; };
+		3027C9872C5B76A80078B585 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9862C5B76A80078B585 /* AppearanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,10 @@
 		3027C9772C5A6A920078B585 /* ThemeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCellView.swift; sourceTree = "<group>"; };
 		3027C9792C5AA0140078B585 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
 		3027C97B2C5AA2700078B585 /* CategoriesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCellView.swift; sourceTree = "<group>"; };
+		3027C97E2C5B68320078B585 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
+		3027C9802C5B68670078B585 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		3027C9842C5B6C870078B585 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		3027C9862C5B76A80078B585 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 		3027C94D2C5A35A60078B585 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3027C97D2C5B68180078B585 /* Settings */,
 				3027C9672C5A60220078B585 /* mainApp */,
 				3027C94E2C5A35B60078B585 /* Start */,
 			);
@@ -147,6 +156,7 @@
 			children = (
 				3027C9562C5A3A580078B585 /* StartViewModel.swift */,
 				3027C9722C5A621B0078B585 /* MainAppViewModel.swift */,
+				3027C9802C5B68670078B585 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,7 +168,6 @@
 				3027C96A2C5A61080078B585 /* AffirmationsView.swift */,
 				3027C96C2C5A611D0078B585 /* CategoriesView.swift */,
 				3027C96E2C5A61300078B585 /* ThemesView.swift */,
-				3027C9702C5A613E0078B585 /* SettingsView.swift */,
 			);
 			path = mainApp;
 			sourceTree = "<group>";
@@ -170,6 +179,17 @@
 				3027C97B2C5AA2700078B585 /* CategoriesCellView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3027C97D2C5B68180078B585 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3027C9702C5A613E0078B585 /* SettingsView.swift */,
+				3027C97E2C5B68320078B585 /* RemindersView.swift */,
+				3027C9842C5B6C870078B585 /* WidgetView.swift */,
+				3027C9862C5B76A80078B585 /* AppearanceView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3027C9572C5A3A580078B585 /* StartViewModel.swift in Sources */,
+				3027C9812C5B68670078B585 /* SettingsViewModel.swift in Sources */,
 				3027C9502C5A36620078B585 /* StartView.swift in Sources */,
 				3027C9752C5A69010078B585 /* ThemesListView.swift in Sources */,
 				3027C95E2C5A3C310078B585 /* GenderSelectionView.swift in Sources */,
@@ -250,14 +271,17 @@
 				3027C9422C5A35920078B585 /* ContentView.swift in Sources */,
 				3027C9662C5A4C1B0078B585 /* DailyMotivationView.swift in Sources */,
 				3027C9692C5A60520078B585 /* mainAppView.swift in Sources */,
+				3027C97F2C5B68320078B585 /* RemindersView.swift in Sources */,
 				3027C9642C5A43F00078B585 /* AreaSelectionView.swift in Sources */,
 				3027C9402C5A35920078B585 /* AffirmationsTestWorkApp.swift in Sources */,
 				3027C9732C5A621B0078B585 /* MainAppViewModel.swift in Sources */,
 				3027C96D2C5A611D0078B585 /* CategoriesView.swift in Sources */,
 				3027C9712C5A613E0078B585 /* SettingsView.swift in Sources */,
 				3027C97C2C5AA2700078B585 /* CategoriesCellView.swift in Sources */,
+				3027C9852C5B6C870078B585 /* WidgetView.swift in Sources */,
 				3027C9602C5A3C9E0078B585 /* SelectionButtonView.swift in Sources */,
 				3027C96F2C5A61300078B585 /* ThemesView.swift in Sources */,
+				3027C9872C5B76A80078B585 /* AppearanceView.swift in Sources */,
 				3027C95C2C5A3B860078B585 /* StartTextView.swift in Sources */,
 				3027C9782C5A6A920078B585 /* ThemeCellView.swift in Sources */,
 				3027C96B2C5A61080078B585 /* AffirmationsView.swift in Sources */,

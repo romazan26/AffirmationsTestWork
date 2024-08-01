@@ -44,6 +44,7 @@ struct CategoriesListView: View {
                         CategoriesCellView(image: item, ischoose: vm.simpleCategories)
                             .onTapGesture {
                                 vm.simpleCategories = item
+                                vm.findAffirmation(categories: item)
                             }
                             
                     }

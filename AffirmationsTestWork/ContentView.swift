@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isFirstStart") var isFirstStart: Bool = true
     @StateObject var vmSetting = SettingsViewModel()
     @StateObject var vmStart = StartViewModel()
     
     var body: some View {
-        if vmStart.startViewsTag < 5{
+        if isFirstStart{
             StartView(vm: vmStart)
         }else{
             mainAppView( vmSettings: vmSetting)

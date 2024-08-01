@@ -12,7 +12,6 @@ struct CategoriesView: View {
     var body: some View {
         
         NavigationView {
-            
             ScrollView {
                 //MARK: - Top button unlock all
                 HStack {

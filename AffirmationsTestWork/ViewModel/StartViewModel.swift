@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class StartViewModel: ObservableObject{
+    
+    @AppStorage("isFirstStart") var isFirstStart: Bool?
     
     @Published var startViewsTag = 1
     
@@ -21,6 +24,8 @@ final class StartViewModel: ObservableObject{
     func slideStartView(){
         if startViewsTag < 5 {
             startViewsTag += 1
+        }else{
+            isFirstStart = false
         }
     }
 }

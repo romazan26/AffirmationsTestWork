@@ -34,6 +34,8 @@
 		3027C9812C5B68670078B585 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9802C5B68670078B585 /* SettingsViewModel.swift */; };
 		3027C9852C5B6C870078B585 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9842C5B6C870078B585 /* WidgetView.swift */; };
 		3027C9872C5B76A80078B585 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9862C5B76A80078B585 /* AppearanceView.swift */; };
+		3027C98B2C5BA63C0078B585 /* Affirmations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3027C9892C5BA63C0078B585 /* Affirmations.xcdatamodeld */; };
+		3027C98D2C5BA6DB0078B585 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027C98C2C5BA6DB0078B585 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		3027C9802C5B68670078B585 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		3027C9842C5B6C870078B585 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		3027C9862C5B76A80078B585 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		3027C98A2C5BA63C0078B585 /* Affirmations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Affirmations.xcdatamodel; sourceTree = "<group>"; };
+		3027C98C2C5BA6DB0078B585 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		3027C93E2C5A35920078B585 /* AffirmationsTestWork */ = {
 			isa = PBXGroup;
 			children = (
+				3027C9882C5BA6180078B585 /* CoreData */,
 				3027C9762C5A6A750078B585 /* Cells */,
 				3027C9582C5A3A5D0078B585 /* ViewModel */,
 				3027C9512C5A36CB0078B585 /* Helpers */,
@@ -192,6 +197,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		3027C9882C5BA6180078B585 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3027C9892C5BA63C0078B585 /* Affirmations.xcdatamodeld */,
+				3027C98C2C5BA6DB0078B585 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,12 +282,14 @@
 				3027C9752C5A69010078B585 /* ThemesListView.swift in Sources */,
 				3027C95E2C5A3C310078B585 /* GenderSelectionView.swift in Sources */,
 				3027C97A2C5AA0140078B585 /* CategoriesListView.swift in Sources */,
+				3027C98D2C5BA6DB0078B585 /* CoreDataManager.swift in Sources */,
 				3027C9422C5A35920078B585 /* ContentView.swift in Sources */,
 				3027C9662C5A4C1B0078B585 /* DailyMotivationView.swift in Sources */,
 				3027C9692C5A60520078B585 /* mainAppView.swift in Sources */,
 				3027C97F2C5B68320078B585 /* RemindersView.swift in Sources */,
 				3027C9642C5A43F00078B585 /* AreaSelectionView.swift in Sources */,
 				3027C9402C5A35920078B585 /* AffirmationsTestWorkApp.swift in Sources */,
+				3027C98B2C5BA63C0078B585 /* Affirmations.xcdatamodeld in Sources */,
 				3027C9732C5A621B0078B585 /* MainAppViewModel.swift in Sources */,
 				3027C96D2C5A611D0078B585 /* CategoriesView.swift in Sources */,
 				3027C9712C5A613E0078B585 /* SettingsView.swift in Sources */,
@@ -502,6 +518,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3027C9892C5BA63C0078B585 /* Affirmations.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3027C98A2C5BA63C0078B585 /* Affirmations.xcdatamodel */,
+			);
+			currentVersion = 3027C98A2C5BA63C0078B585 /* Affirmations.xcdatamodel */;
+			name = Affirmations.xcdatamodeld;
+			path = /Users/roman/Downloads/XcodeProgramm/AffirmationsTestWork/AffirmationsTestWork/CoreData/Affirmations.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3027C9342C5A35920078B585 /* Project object */;
 }
